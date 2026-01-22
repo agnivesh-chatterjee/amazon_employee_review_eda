@@ -1,6 +1,7 @@
 [theme]
-primaryColor = "#1f77b4"
-backgroundColor = "#0e1117"
-secondaryBackgroundColor = "#161b22"
-textColor = "#e6edf3"
+primaryColor = "#FF9900"              # Amazon Orange
+backgroundColor = "#0f1111"           # Amazon dark background
+secondaryBackgroundColor = "#1a1c1e"  # Card / sidebar background
+textColor = "#e7e7e7"                 # Light neutral text
 font = "sans serif"
+
