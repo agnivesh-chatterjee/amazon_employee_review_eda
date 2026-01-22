@@ -219,11 +219,6 @@ Below you can find an interactive pie chart showing the distribution of reviews 
     )
 st.subheader("Calendar Heatmap")
 
-st.image(
-    "calendar_heatmap.png",
-    caption="Calendar Heatmap of Review Activity",
-    use_container_width=True
-)
 
 # ------------------------------------
 
@@ -614,3 +609,4 @@ with tabs[8]:
 st.markdown("---")
 
 st.markdown("Built with Streamlit •  by Agnivesh Chatterjee ")
+
