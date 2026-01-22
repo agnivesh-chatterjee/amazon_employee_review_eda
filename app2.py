@@ -217,6 +217,13 @@ Below you can find an interactive pie chart showing the distribution of reviews 
         "This pie chart shows how employee reviews are distributed across countries "
         "for the selected year range and country filters."
     )
+st.subheader("Calendar Heatmap")
+
+st.image(
+    "calendar_heatmap.png",
+    caption="Calendar Heatmap of Review Activity",
+    use_container_width=True
+)
 
 # ------------------------------------
 
@@ -605,4 +612,5 @@ with tabs[8]:
 # Footer
 # ------------------------------------
 st.markdown("---")
+
 st.markdown("Built with Streamlit •  by Agnivesh Chatterjee ")
