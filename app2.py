@@ -211,10 +211,6 @@ Below you can find an interactive pie chart showing the distribution of reviews 
         "This pie chart shows how employee reviews are distributed across countries "
         "for the selected year range and country filters."
     )
-st.subheader("Calendar Heatmap")
-st.image("calendar_heatmap.png", use_container_width=True)
-st.info("This heatmap shows how often reviews were submitted on a monthly basis through glassdoor for the duration of 2008-2020")
-
 # ------------------------------------
 
 
@@ -604,6 +600,7 @@ with tabs[8]:
 st.markdown("---")
 
 st.markdown("Built with Streamlit •  Amazon Workplace Reviews EDA by Agnivesh Chatterjee")
+
 
 
 
