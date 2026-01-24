@@ -10,12 +10,6 @@ from wordcloud import WordCloud, STOPWORDS
 
 # -----------------------------------------------
 
-# Page config
-st.set_page_config(
-    page_title="A To Z: Analysing Amazon's Workplace Reviews",
-    layout="wide"
-)
-
 
 
 
@@ -28,8 +22,8 @@ st.set_page_config(
 )
 
 
-st.title("Amazon Job Reviews EDA (2008–2020)")
-st.markdown("Interactive exploratory analysis of employee reviews across countries ")
+st.title("A to Z: Analysing Amazon's Worplace Reviews")
+st.markdown("Interactive exploratory data analysis of employee reviews across countries from 2008-2020 ")
 
 # ------------------------------------
 @st.cache_data
@@ -609,5 +603,6 @@ with tabs[8]:
 st.markdown("---")
 
 st.markdown("Built with Streamlit •  Amazon Workplace Reviews EDA by Agnivesh Chatterjee")
+
 
 
