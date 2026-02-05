@@ -292,10 +292,11 @@ with tabs[3]:
 with tabs[4]:
     st.subheader("Country-wise Rating Trends")
 
-    metric = st.selectbox(
+    # IMPORTANT: use a unique variable name
+    selected_metric = st.selectbox(
         "Select Rating Metric",
-        selected_metrics,
-        key="country_trend_metric"
+        options=selected_metrics,
+        key="country_trend_metric_unique"
     )
 
     # ---------- Boxplot ----------
@@ -304,7 +305,7 @@ with tabs[4]:
     fig_box = px.box(
         filtered_df,
         x="Country",
-        y=metric,
+        y=selected_metric,
         color="Country"
     )
 
@@ -312,7 +313,7 @@ with tabs[4]:
 
     st.info(
         metric_conclusions.get(
-            metric,
+            selected_metric,
             "Compares rating distributions across countries."
         )
     )
@@ -322,17 +323,16 @@ with tabs[4]:
     # ---------- Line plot ----------
     st.markdown("#### Trends Over Time by Country")
 
-    yearly = (
+    yearly_country_metric = (
         filtered_df
-        .groupby(["Year", "Country"])[metric]
+        .groupby(["Year", "Country"], as_index=False)[selected_metric]
         .mean()
-        .reset_index()
     )
 
     fig_line = px.line(
-        yearly,
+        yearly_country_metric,
         x="Year",
-        y=metric,
+        y=selected_metric,
         color="Country",
         markers=True
     )
@@ -340,9 +340,10 @@ with tabs[4]:
     st.plotly_chart(fig_line, use_container_width=True)
 
     st.info(
-        "Shows how the selected metric evolves over time for each country "
+        f"Shows how **{selected_metric}** evolves over time for each country "
         "under the current filters."
     )
+
 
     st.info(
 
@@ -600,6 +601,7 @@ with tabs[8]:
 st.markdown("---")
 
 st.markdown("Built with Streamlit •  Amazon Workplace Reviews EDA by Agnivesh Chatterjee")
+
 
 
 
